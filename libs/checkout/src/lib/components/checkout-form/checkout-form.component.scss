@@ -1,0 +1,15 @@
+.checkout-form__fields-container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 16px;
+  margin: 8px auto;
+
+  @media (min-width: 768px) {
+    grid-auto-flow: column;
+  }
+}
+
+.checkout-form__actions {
+  text-align: center;
+  margin: 16px 0;
+}

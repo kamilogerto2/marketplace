@@ -1,0 +1,81 @@
+@use "libs/design-system/src/lib/styles/colors" as colors;
+
+mat-card-content {
+  text-align: center;
+  padding: 16px;
+}
+
+img {
+  transition: all .3s ease-in-out;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  transition: all 1s ease-in;
+
+  &:hover:not(.disabled) {
+    cursor: pointer;
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  &:active:not(.disabled) {
+    img {
+      transform: scale(1.2);
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+
+    .grid-item__overlay {
+      transition: none;
+      background-color: colors.$base-black;
+      opacity: 0.5;
+      pointer-events: none;
+
+      mat-icon {
+        display: none;
+      }
+    }
+  }
+}
+
+.grid-item__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  color: colors.$base-black;
+  bottom: 0;
+  opacity: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .3s ease-in-out;
+
+  mat-icon {
+    transition: all .1s ease-in-out;
+    color: colors.$base-grey-100;
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    mat-icon {
+      width: 6rem;
+      height: 6rem;
+      font-size: 6rem;
+    }
+  }
+}
+

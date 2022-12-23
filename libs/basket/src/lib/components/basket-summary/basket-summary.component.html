@@ -1,0 +1,9 @@
+<marketplace-items-list *ngIf="(basketItems$ | async) as basketItems">
+  <marketplace-list-item
+    *ngFor="let basketItem of basketItems; trackBy: trackItem"
+    (itemRemoved)="removeItem(basketItem.id)"
+    [description]="basketItem.name"
+    [amount]="basketItem.prize"
+    [imagePath]="basketItem.imagePath"
+  ></marketplace-list-item>
+</marketplace-items-list>

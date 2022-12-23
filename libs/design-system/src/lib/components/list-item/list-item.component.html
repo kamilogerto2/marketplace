@@ -1,0 +1,10 @@
+<div class="list-item">
+  <img *ngIf="imagePath" class="list-item__image" [ngSrc]="imagePath" height="100" width="100">
+  <div class="list-item__description">
+    <marketplace-label>{{description}}</marketplace-label>
+    <marketplace-money-value [amount]="amount"></marketplace-money-value>
+  </div>
+  <div class="list-item__actions">
+    <mat-icon (click)="itemRemoved.emit()" class="material-icons-outlined" fontIcon="delete"></mat-icon>
+  </div>
+</div>

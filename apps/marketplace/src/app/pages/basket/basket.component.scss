@@ -1,0 +1,16 @@
+.basket__actions {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 16px;
+  margin: 32px auto;
+  text-align: center;
+}
+
+.basket__empty-container {
+  padding: 120px 16px;
+}
+
+.basket__label {
+  display: block;
+  margin-bottom: 24px;
+}

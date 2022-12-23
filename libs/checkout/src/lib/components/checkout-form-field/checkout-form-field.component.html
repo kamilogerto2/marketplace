@@ -1,0 +1,13 @@
+<mat-form-field class="checkout-form-field" *ngIf="control">
+  <mat-label>{{label}}</mat-label>
+  <input [formControl]="control" matInput [placeholder]="label">
+  <mat-error *ngIf="control.hasError('max') && !control.hasError('required')">
+    {{label}} should have less then 255 characters
+  </mat-error>
+  <mat-error *ngIf="control.hasError('pattern') && !control.hasError('required') && !control.hasError('max')">
+    {{label}} value is not valid
+  </mat-error>
+  <mat-error *ngIf="control.hasError('required')">
+    {{label}} is <strong>required</strong>
+  </mat-error>
+</mat-form-field>

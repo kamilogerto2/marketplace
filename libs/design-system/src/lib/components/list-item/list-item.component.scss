@@ -1,0 +1,33 @@
+@use "libs/design-system/src/lib/styles/colors" as colors;
+
+.list-item {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 24px;
+  grid-template-columns: 100px auto 40px;
+  align-items: center;
+  border: 1px solid colors.$base-grey-100;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.list-item__image {
+  object-fit: cover;
+}
+
+.list-item__actions {
+  padding-right: 16px;
+}
+
+mat-icon {
+  cursor: pointer;
+  transition: all .2 ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1.2);
+  }
+}

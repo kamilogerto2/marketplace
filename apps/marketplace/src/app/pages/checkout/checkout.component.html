@@ -1,0 +1,9 @@
+<ng-container *ngIf="!isTransactionSucceeded else successInfo">
+  <marketplace-checkout-form (transactionSucceeded)="finalizeTransaction()"></marketplace-checkout-form>
+</ng-container>
+<ng-template #successInfo>
+  <div class="checkout__actions">
+    <marketplace-label class="checkout__label">Thank you for your purchase</marketplace-label>
+    <marketplace-button (click)="navigationService.navigateToHomepage()">Buy more</marketplace-button>
+  </div>
+</ng-template>

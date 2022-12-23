@@ -1,0 +1,18 @@
+<ng-container *ngIf="(basketItemsCount$ | async) else emptyBasket">
+  <marketplace-basket-summary (productRemoved)="unbookProduct($event)"></marketplace-basket-summary>
+  <div class="basket__actions">
+    <marketplace-label>Total price: {{((basketTotalPrize$ | async) | currency)}}</marketplace-label>
+    <ng-container *ngIf="{isEnoughMoney: (isEnoughMoney$ | async) } as data">
+      <marketplace-button [disabled]="!data.isEnoughMoney" (click)="navigationService.navigateToCheckout()">Checkout</marketplace-button>
+      <div>
+        <mat-error *ngIf="!data.isEnoughMoney">You don't have enough money for that transaction.</mat-error>
+      </div>
+    </ng-container>
+  </div>
+</ng-container>
+<ng-template #emptyBasket>
+  <div class="basket__actions basket__empty-container">
+    <marketplace-label class="basket__label">There is nothing in basket. Feel free to choose more products!"</marketplace-label>
+    <marketplace-button (click)="navigationService.navigateToHomepage()">Go to dashboard</marketplace-button>
+  </div>
+</ng-template>

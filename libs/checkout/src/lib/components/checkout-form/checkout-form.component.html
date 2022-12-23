@@ -1,0 +1,21 @@
+<form [formGroup]="form">
+  <div class="checkout-form__fields-container">
+    <marketplace-checkout-form-field [control]="form.controls['name']" label="Name"></marketplace-checkout-form-field>
+    <marketplace-checkout-form-field [control]="form.controls['last_name']" label="Last name"></marketplace-checkout-form-field>
+  </div>
+  <div>
+    <div class="checkout-form__fields-container">
+      <marketplace-checkout-form-field [control]="form.controls['street']" label="Street"></marketplace-checkout-form-field>
+      <marketplace-checkout-form-field [control]="form.controls['city']" label="City"></marketplace-checkout-form-field>
+    </div>
+    <div class="checkout-form__fields-container">
+      <marketplace-checkout-form-field [control]="form.controls['state']" label="State"></marketplace-checkout-form-field>
+    </div>
+  </div>
+  <div class="checkout-form__fields-container">
+    <marketplace-checkout-form-field [control]="form.controls['email']" label="Email"></marketplace-checkout-form-field>
+  </div>
+</form>
+<div class="checkout-form__actions">
+  <marketplace-button [disabled]="!form.valid" (click)="pay()">Go to payments</marketplace-button>
+</div>

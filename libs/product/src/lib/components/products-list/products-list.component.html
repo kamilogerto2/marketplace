@@ -1,0 +1,10 @@
+<marketplace-items-grid *ngIf="(products$ | async) as products">
+  <marketplace-grid-item
+    (click)="selectItem(product)"
+    *ngFor="let product of products; trackBy: trackProduct"
+    [amount]="product.prize"
+    [imagePath]="product.imagePath"
+    [description]="product.name"
+    [disabled]="!!product.disabled"
+  ></marketplace-grid-item>
+</marketplace-items-grid>

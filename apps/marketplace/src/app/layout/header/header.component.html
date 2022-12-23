@@ -1,0 +1,7 @@
+<div class="header">
+  <marketplace-title class="header__title" (click)="navigationService.navigateToHomepage()" text="MARKETPLACE"></marketplace-title>
+  <div class="header__actions">
+    <marketplace-wallet-status></marketplace-wallet-status>
+    <marketplace-basket-status (click)="navigationService.navigateToBasket()"></marketplace-basket-status>
+  </div>
+</div>

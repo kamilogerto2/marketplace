@@ -1,0 +1,22 @@
+@use "libs/design-system/src/lib/styles/colors" as colors;
+
+.icon-action-box__wrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  background-color: colors.$base-grey-100;
+  padding: 4px 12px;
+
+  &:hover {
+    background-color: colors.$base-grey-300;
+  }
+
+  &:active {
+    background-color: colors.$base-grey-200;
+  }
+}
+
+.icon-action__icon {
+  padding-right: 16px;
+}

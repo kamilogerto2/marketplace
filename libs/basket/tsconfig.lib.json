@@ -1,0 +1,27 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "types": [],
+    "paths": {
+      "@marketplace/product": [
+        "dist/libs/marketplace/product",
+        "libs/product/src/index.ts"
+      ],
+      "@marketplace/design-system": [
+        "dist/libs/marketplace/design-system",
+        "libs/design-system/src/index.ts"
+      ]
+    },
+  },
+  "exclude": [
+    "src/test-setup.ts",
+    "src/**/*.spec.ts",
+    "jest.config.ts",
+    "src/**/*.test.ts"
+  ],
+  "include": ["src/**/*.ts"]
+}

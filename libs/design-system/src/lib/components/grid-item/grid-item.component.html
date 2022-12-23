@@ -1,0 +1,10 @@
+<mat-card class="grid-item" [class.disabled]="disabled">
+  <div class="grid-item__overlay">
+    <mat-icon class="material-icons-outlined">add_shopping_cart</mat-icon>
+  </div>
+  <img *ngIf="imagePath" mat-card-image [ngSrc]="imagePath" width="400" height="300">
+  <mat-card-content>
+    <marketplace-label>{{description}}</marketplace-label>
+    <marketplace-money-value [amount]="amount"></marketplace-money-value>
+  </mat-card-content>
+</mat-card>
