@@ -12,10 +12,8 @@ Run `nx serve marketplace` for a dev server. Navigate to http://localhost:4200/.
 
 Run `nx graph` to see a diagram of the dependencies of the projects.
 
-## Remote caching
+## Design system storybook
+Run `nx design-system:storybook` to see a storybook for design system.
 
-Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and make CI faster.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+## Running tests
+Run `npm run test:all` to srun tests.
