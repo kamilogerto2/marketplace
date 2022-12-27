@@ -16,4 +16,4 @@ Run `nx graph` to see a diagram of the dependencies of the projects.
 Run `nx design-system:storybook` to see a storybook for design system.
 
 ## Running tests
-Run `npm run test:all` to srun tests.
+Run `npm run test:all` to run tests.

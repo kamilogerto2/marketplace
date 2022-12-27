@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './layout/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from '../environments/environments';
+import { environment } from '../environments/environment';
 import { CHECKOUT_CONFIG_TOKEN } from '@marketplace/checkout';
 
 @NgModule({

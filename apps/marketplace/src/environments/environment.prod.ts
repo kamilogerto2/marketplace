@@ -1,4 +1,4 @@
-import { Environment } from './environments.interface';
+import { Environment } from './environment.interface';
 
 export const environment: Environment = {
   wallet: {
